@@ -159,5 +159,8 @@
     ],
     "sourceMap": true,
     "instrument": true
+  },
+  "dependencies": {
+    "closer": "^0.2.3"
   }
 }

@@ -1,3 +1,5 @@
+var closer = require('closer');
+console.log({ closer })
 import * as acorn from '../acorn';
 import { Parser } from '../index';
 import { Script } from '../../interfaces';
@@ -31,6 +33,8 @@ export default function read_script(parser: Parser, start: number, attributes: N
 	const source = parser.template.slice(0, script_start).replace(/[^\n]/g, ' ') + data;
 	parser.read(/<\/script\s*>/);
 
+  // parse
+//var ast = closer.parse('(+ 1 2)', { coreIdentifier: 'core' });
 	let ast: Program;
 
 	try {
